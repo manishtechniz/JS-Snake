@@ -1,0 +1,114 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+i{
+    font-size: 25px;
+    position: absolute;
+    top: -3px !important;
+    left: 2px;
+}
+.snake_container {
+
+    width: 100%;
+    height: 95%;
+    /* background-color: black; */
+
+}
+
+.snake_container img {
+    width: 100%;
+    height: 100%;
+}
+
+/* snake body style */
+.body {
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+    width: 75%;
+    height: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background: red; */
+}
+
+.food {
+    background-color: yellow;
+}
+
+.head {
+    background: black;
+    border-bottom-left-radius: 32px;
+    margin-top: 1px;
+}
+
+.snakeBack {
+    background-color: rgb(255 255 255);
+    border-radius: 50%;
+    width: 106%;
+    height: 89%;
+}
+.snakeTail1{
+    width: 23px;
+    height: 14px;
+    margin-top: 3px;
+    margin-left: 4px;
+}
+.snakeTail2{
+    width: 16px;
+    height: 13px;
+    margin-left: 12px;
+    margin-top: 4px;
+}
+
+
+/* Snake Mouth Rotation */
+.ArrowUp {
+    transform: rotate(266deg) !important;
+}
+
+.ArrowDown {
+    transform: rotate(82deg) !important;
+}
+
+.ArrowLeft {
+    transform: rotateY(180deg) !important;
+}
+
+.ArrowRight {
+    transform: rotateY(0deg) !important;
+}
+ 
+@media screen and (min-width: 1024px) {
+    .snake_container {
+        width: 70%;
+    }
+
+    .body {
+        width: 52%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .body {
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(18, 1fr);
+
+    }
+}
